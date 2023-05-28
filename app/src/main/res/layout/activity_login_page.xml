@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
+    tools:context=".LoginPage">
+
+    <EditText
+        android:id="@+id/editTextLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLoginUsername"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/loginTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:text="HEALTH CARE 24/7"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/loginTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="LOGIN"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/loginTextView1" />
+
+    <EditText
+        android:id="@+id/editTextLoginUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginTextView2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColorHint="@color/white"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextLoginPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textViewLoginNewUser"
+        android:text="Register for new user 👈"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginButton"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textColor="#1B1A1A" />
+</RelativeLayout>

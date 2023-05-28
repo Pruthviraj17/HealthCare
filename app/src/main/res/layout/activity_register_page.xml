@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/background"
+    tools:context=".RegisterPage">
+
+    <TextView
+        android:id="@+id/loginTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="HEALTH CARE 24/7"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewBMBPackageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="REGISTRATION"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/loginTextView1"
+         />
+
+    <EditText
+        android:id="@+id/editTextBMBFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewBMBPackageName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:padding="15dp"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/editTextRegisterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBMBFullName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF"
+        />
+
+    <EditText
+        android:id="@+id/editTextRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextRegisterEmail"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF"
+        />
+
+    <EditText
+        android:id="@+id/editTextRegisterConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextRegisterPassword"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:textColorHint="@color/white"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="10dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF"
+         />
+
+    <Button
+        android:id="@+id/registerButtonApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextRegisterConfirmPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:text="Register"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/socialIcons"
+        android:gravity="center"
+        android:layout_below="@+id/registerButtonApp"
+        >
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/google"
+            />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/fb"
+            />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/twitter"
+            />
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewRegisterLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/socialIcons"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Already have an account?\nLogin here! 👈"
+            android:textAlignment="center"
+            android:textColor="#1B1A1A" />
+
+</RelativeLayout>

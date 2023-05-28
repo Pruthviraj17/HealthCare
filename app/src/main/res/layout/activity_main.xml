@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backgroundlayout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bluelogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/healthlogo1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/whitelogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/healthlogo1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DeveloperName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developed by Pruthviraj"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="502dp" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
