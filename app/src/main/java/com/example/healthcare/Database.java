@@ -52,6 +52,18 @@ public class Database extends SQLiteOpenHelper {
         return result;
     }
 
+    public int checkUsers(String username){
+        int result=0;
+        String str[]=new String[1];
+        str[0]=username;
+        SQLiteDatabase db=getReadableDatabase();
+        Cursor c= db.rawQuery("select * from users where username=?",str);
+        if(c.moveToFirst()){
+            result=1;
+        }
+        return result;
+    }
+
     public void addCart(String username, String product,float price,String otype){
         ContentValues cv=new ContentValues();
         cv.put("username",username);
