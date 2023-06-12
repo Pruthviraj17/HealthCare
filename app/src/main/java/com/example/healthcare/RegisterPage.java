@@ -3,6 +3,7 @@ package com.example.healthcare;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,17 +45,21 @@ public class RegisterPage extends AppCompatActivity {
                 if (username.length() == 0 || email.length() == 0 || password.length() == 0 || confirm.length() == 0) {
                     Toast.makeText(RegisterPage.this, "Please fill the credentials", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (password.compareTo(confirm) == 0) {
-                        if(isValid(password)){
-                            db.register(username,email,password);
-                            Toast.makeText(RegisterPage.this, "Record Inserted", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegisterPage.this,LoginPage.class));
+                    if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                        if (password.compareTo(confirm) == 0) {
+                            if (isValid(password)) {
+                                db.register(username, email, password);
+                                Toast.makeText(RegisterPage.this, "Record Inserted", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(RegisterPage.this, LoginPage.class));
+                            } else {
+                                Toast.makeText(RegisterPage.this, "Password must contain at least 8 characters, having letter, digit & special symbol", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(RegisterPage.this, "Password and confirm password didn't match", Toast.LENGTH_SHORT).show();
                         }
-                        else {
-                            Toast.makeText(RegisterPage.this, "Password must contain at least 8 characters, having letter, digit & special symbol", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(RegisterPage.this, "Password and confirm password didn't match", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(RegisterPage.this, "Invalid E-Mail", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
